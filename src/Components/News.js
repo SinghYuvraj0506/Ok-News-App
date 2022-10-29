@@ -96,13 +96,13 @@ export default class News extends Component {
           <h2 className="text-center my-3">OkNews - Top {capitalize(this.props.category)} Headlines</h2>
         {/* {this.state.loading && <Spinner/>} */}
         <InfiniteScroll
-          dataLength={this.state.articles.length}
+          dataLength={this.state?.articles?.length}
           next={this.fetchMoreData}
-          hasMore={this.state.articles.length !== this.state.totalArticles}
+          hasMore={this.state?.articles?.length !== this.state.totalArticles}
           loader={<Spinner/>}>
             <div className="container">
           <div className="row my-3">
-            {this.state.articles.map((element) => {
+            {this.state?.articles?.map((element) => {
               return (
                 <div className="col-md-4 my-3" key={element.url}>
                   <Newitems
